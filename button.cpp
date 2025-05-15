@@ -9,19 +9,28 @@ button::button(POINT position, SIZE size, COLORREF color) {
 
 void button::Draw_start() {
 	IMAGE img;
-	loadimage(&img, _T("picture\\startbutton.jpg"), m_size.cx , m_size.cy , 0);  // º”‘ÿÕº∆¨
-	putimage(m_position.x, m_position.y, &img);  // œ‘ æÕº∆¨
+	IMAGE img2;
+	loadimage(&img, _T("picture\\startbutton.jpg"), m_size.cx, m_size.cy, 0);  // º”‘ÿÕº∆¨
+	loadimage(&img2, _T("picture\\startbutton2.jpg"), m_size.cx, m_size.cy, 0);
+	putimage(m_position.x, m_position.y, &img2, NOTSRCERASE);  // œ‘ æÕº∆¨
+	putimage(m_position.x, m_position.y, &img, SRCINVERT);  // œ‘ æÕº∆¨	
 }
 
 void button::Draw_end() {
 	IMAGE img;
-	loadimage(&img, _T("picture\\endbutton.jpg"), m_size.cx , m_size.cy , 0);  // º”‘ÿÕº∆¨
-	putimage(m_position.x, m_position.y, &img);  // œ‘ æÕº∆¨
+	IMAGE img2;
+	loadimage(&img, _T("picture\\endbutton.jpg"), m_size.cx, m_size.cy, 0);  // º”‘ÿÕº∆¨
+	loadimage(&img2, _T("picture\\endbutton2.jpg"), m_size.cx, m_size.cy, 0);
+	putimage(m_position.x, m_position.y, &img2, NOTSRCERASE);  // œ‘ æÕº∆¨
+	putimage(m_position.x, m_position.y, &img, SRCINVERT);  // œ‘ æÕº∆¨	
 }
 void button::Draw_return() {
 	IMAGE img;
-	loadimage(&img, _T("picture\\returnbutton.jpg"), m_size.cx , m_size.cy , 0);  // º”‘ÿÕº∆¨
-	putimage(m_position.x, m_position.y, &img);  // œ‘ æÕº∆¨
+	IMAGE img2;
+	loadimage(&img, _T("picture\\returnbutton.jpg"), m_size.cx, m_size.cy, 0);  // º”‘ÿÕº∆¨
+	loadimage(&img2, _T("picture\\returnbutton2.jpg"), m_size.cx, m_size.cy, 0);
+	putimage(m_position.x, m_position.y, &img2, NOTSRCERASE);  // œ‘ æÕº∆¨
+	putimage(m_position.x, m_position.y, &img, SRCINVERT);  // œ‘ æÕº∆¨	
 }
 
 void button::Event_Tick(const ExMessage* Ipmsg) {

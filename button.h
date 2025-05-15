@@ -4,18 +4,19 @@
 class button
 {
 public:
-	button(POINT position, SIZE size, COLORREF color);
-	void Draw_start();
-	void Draw_end();
-	void Draw_return();
-	void Event_Tick(const ExMessage* Ipmsg);
+    button(POINT position, SIZE size, COLORREF color);
+    void Draw_start();
+    void Draw_end();
+    void Draw_return();
+    void Event_Tick(const ExMessage* Ipmsg);
 
-	//void(*Onclick);函数指针(c语言)（用于回调函数）
-	std::function<void()> Onclick;//函数包装器(c++)
+    std::function<void()> Onclick;
 
 private:
-	POINT m_position;//按钮位置
-	SIZE m_size;//按钮大小
-	COLORREF m_color;//按钮颜色
+    POINT m_position;
+    SIZE m_size;
+    COLORREF m_color;
+    IMAGE img_start, img2_start;
+    IMAGE img_end, img2_end;
+    IMAGE img_return, img2_return;
 };
-
